@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+.no-padding {
+
+	padding: 0 !important;
+	box-sizing: border-box;
+
+}
+
+.img {
+
+	margin: 0.5vw;
+
+}
+
+.img-medium {
+
+	width: 4rem;
+	height: 4rem;
+
+}
+
+.img-small {
+
+	width: 2rem;
+	height: 2rem;
+
+}
+
+a:hover {
+
+	cursor: pointer;
+
+}
+
+.title-1{
+
+	font-size: 2rem;
+
+}
