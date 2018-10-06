@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-aside',
@@ -8,13 +7,21 @@ import { DataService } from '../data.service';
 })
 export class AsideComponent implements OnInit {
 
-	options: any;
+	asideOpened: boolean = false;
+	opened2: boolean = true;
 
-	constructor(private dataService: DataService) { }
+	@ViewChild('sidenav') sidenav;
+
+	constructor() { }
 
 	ngOnInit() {
 
-		this.options = this.dataService.getMenuOptions();
+	}
+
+	toggle() {
+
+		this.sidenav.toggle();
+		this.asideOpened = !this.asideOpened;
 
 	}
 

@@ -1,0 +1,56 @@
+.aside{
+
+	height: 100%;
+
+}
+
+mat-sidenav {
+
+	background-color: rgb(26, 32, 65);
+	color: #fff;
+	overflow: hidden;
+
+}
+
+#reduced-menu {
+
+	width: 4vw;
+	height: 86.75vh;
+	background-color: rgb(26, 32, 65);
+	color: #fff;
+	float: left;
+
+}
+
+#menu {
+
+	height: 86.75vh;
+	width: 15vw;
+	color: #fff;
+
+}
+
+.menu-item {
+
+	width: 100% !important;
+
+	&:hover {
+
+		background-color: rgb(136, 28, 127);
+
+	}
+
+}
+
+.chevron {
+
+	justify-self: end;
+	margin: 0.5rem;
+
+}
+
+#content-area {
+
+	width: 83vw !important;
+
+}

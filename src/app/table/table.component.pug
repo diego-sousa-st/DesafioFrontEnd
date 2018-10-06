@@ -1,0 +1,30 @@
+.table-responsive
+	table.table.text-center.table-bordered.table-striped.table-hover.table-sm
+		thead
+			tr.text-center
+				th Data
+				th Demanda
+				th Capacidade
+				th Atendimento Planejado
+				th Atendimento Realizado
+				th Desvio
+
+		tbody
+			ng-container(*ngFor='let data of returnedArray; index as i;')
+				tr.text-center
+					td {{ data.date | date: 'dd/MM/yyyy'}}
+					td {{ data.demand }}
+					td {{ data.capacity }}
+					td {{ data.plannedAttendance }}
+					td {{ data.performedAttendance }}
+					td {{ data.deviation }}
+	#pagination
+		pagination.mr-3(
+			[totalItems]='stockData.length',
+			[boundaryLinks]='true',
+			(pageChanged)='pageChanged($event)',
+			[maxSize]="10",
+			[previousText]="'&lsaquo;'", [nextText]="'&rsaquo;'", [firstText]="'&laquo;'", [lastText]="'&raquo;'"
+		)
+		span Exemplo: Visualizando {{ startItem }} - {{ endItem }} de {{ stockData.length }}
+

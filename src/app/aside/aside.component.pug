@@ -1,17 +1,44 @@
 .row
-	.col-2
-		#v-pills-tab.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
-			a#v-pills-estoque-tab.nav-link.active(data-toggle='pill', href='#v-pills-estoque', role='tab', aria-controls='v-pills-estoque', aria-selected='true') Gestão de estoque
-			a#v-pills-gestProc-tab.nav-link(data-toggle='pill', href='#v-pills-gestProc', role='tab', aria-controls='v-pills-gestProc', aria-selected='false') Gestão de pessoas
-			a#v-pills-gestPessoas-tab.nav-link(data-toggle='pill', href='#v-pills-gestPessoas', role='tab', aria-controls='v-pills-gestPessoas', aria-selected='false') Gestão de pessoas
-			a#v-pills-balanco-tab.nav-link(data-toggle='pill', href='#v-pills-balanco', role='tab', aria-controls='v-pills-balanco', aria-selected='false') Balanço financeiro
-			a#v-pills-relatorio-tab.nav-link(data-toggle='pill', href='#v-pills-relatoria', role='tab', aria-controls='v-pills-relatorio', aria-selected='false') Relatórios
-			a#v-pills-projecao-tab.nav-link(data-toggle='pill', href='#v-pills-projecao', role='tab', aria-controls='v-pills-projecao', aria-selected='false') Projeções
-	.col-10
-		#v-pills-tabContent.tab-content
-			#v-pills-estoque.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-estoque-tab') ...
-			#v-pills-gestProc.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-gestProc-tab') ...
-			#v-pills-gestPessoas.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-gestPessoas-tab') ...
-			#v-pills-balanco.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-balanco-tab') ...
-			#v-pills-relatorio.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-relatorio-tab') ...
-			#v-pills-projecao.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-projecao-tab') ...
+	.col-12
+		mat-sidenav-container.example-container
+			mat-sidenav(#sidenav='', mode='side', [(opened)]='opened', (opened)="asideOpened = true", (closed)="asideOpened = false", [fixedInViewport]='true', [fixedTopGap]='77')
+				#menu.d-flex.flex-column.align-items-end
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Gestão de Estoque
+						i.fa.fa-fw.fa-cubes
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Gestão de Pessoas
+						i.fa.fa-fw.fa-users
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Gestão de Processos
+						i.fa.fa-fw.fa-gears
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Gestão de Projeções
+						i.fa.fa-fw.fa-line-chart
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Gestão de Relatórios
+						i.fa.fa-fw.fa-file-text
+					a.menu-item.d-flex.justify-content-between.p-2
+						span.mr-2 Balanço Financeiro
+						i.fa.fa-fw.fa-dollar
+					a.d-flex.align-self-end.mt-auto.chevron(mat-button='', (click)='toggle()')
+						i.fa.fa-chevron-left
+
+			mat-sidenav-content
+				#reduced-menu.d-flex.flex-column.align-items-end(*ngIf='!asideOpened')
+					a.menu-item.d-flex.justify-content-center.p-2(title='Gestão de Estoque', alt='Gestão de Estoque')
+						i.fa.fa-fw.fa-cubes
+					a.menu-item.d-flex.justify-content-center.p-2(title='Gestão de Pessoas', alt='Gestão de Pessoas')
+						i.fa.fa-fw.fa-users
+					a.menu-item.d-flex.justify-content-center.p-2(title='Gestão de Processos', alt='Gestão de Processos')
+						i.fa.fa-fw.fa-gears
+					a.menu-item.d-flex.justify-content-center.p-2(title='Gestão de Projeções', alt='Gestão de Projeções')
+						i.fa.fa-fw.fa-line-chart
+					a.menu-item.d-flex.justify-content-center.p-2(title='Gestão de Relatórios', alt='Gestão de Relatórios')
+						i.fa.fa-fw.fa-file-text
+					a.menu-item.d-flex.justify-content-center.p-2(title='Balanço Financeiro', alt='Balanço Financeiro')
+						i.fa.fa-fw.fa-dollar
+					a.d-flex.align-self-end.mt-auto.chevron(mat-button='', (click)='toggle()')
+						i.fa.fa-chevron-right
+				#content-area.d-block.float-left
+					app-principal
