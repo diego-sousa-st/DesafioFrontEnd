@@ -15,7 +15,7 @@ mat-sidenav {
 #reduced-menu {
 
 	width: 4vw;
-	height: 86.75vh;
+	height: 88.8vh;
 	background-color: rgb(26, 32, 65);
 	color: #fff;
 	float: left;
@@ -38,6 +38,7 @@ mat-sidenav {
 	&:hover {
 
 		background-color: rgb(87, 28, 136);
+		border: 2px solid rgba(103, 189, 45, 0.979);
 
 	}
 
