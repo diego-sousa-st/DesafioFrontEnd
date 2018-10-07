@@ -1,7 +1,7 @@
 .row
 	.col-12
 		mat-sidenav-container.example-container
-			mat-sidenav(#sidenav='', mode='side', [(opened)]='opened', (opened)="asideOpened = true", (closed)="asideOpened = false", [fixedInViewport]='true', [fixedTopGap]='77')
+			mat-sidenav(#sidenav='', mode='side', [(opened)]='asideOpened', (opened)="asideOpened = true", (closed)="asideOpened = false", [fixedInViewport]='true', [fixedTopGap]='77')
 				#menu.d-flex.flex-column.align-items-end
 					a.menu-item.d-flex.justify-content-between.p-2
 						span.mr-2 Gestão de Estoque

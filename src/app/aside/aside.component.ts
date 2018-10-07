@@ -8,7 +8,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AsideComponent implements OnInit {
 
 	asideOpened: boolean = false;
-	opened2: boolean = true;
 
 	@ViewChild('sidenav') sidenav;
 
