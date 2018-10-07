@@ -6,3 +6,43 @@
 	align-items: baseline;
 
 }
+
+#pagination span{
+
+	font-size: 0.9rem;
+
+}
+
+table {
+
+	color: rgb(28, 13, 65);
+
+}
+
+thead {
+
+	background-color: rgba(31, 121, 143, 0.795);
+	color: #fff;
+
+}
+
+tbody tr {
+
+	&:nth-child(odd){
+
+		background-color: rgba(30, 102, 131, 0.4);
+
+	}
+
+	&:nth-child(even){
+
+		background-color: rgba(21, 81, 83, 0.4);
+
+	}
+
+	&:hover {
+
+		background-color: rgba(31, 121, 143, 0.5);
+
+	}
+}

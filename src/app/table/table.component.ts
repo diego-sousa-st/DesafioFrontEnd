@@ -11,15 +11,15 @@ export class TableComponent implements OnInit {
 
 	stockData: any[];
 	returnedArray: any[];
-	startItem: number = 1;
-	endItem: number = 10;
+	startItem: number = 0;
+	endItem: number = 5;
 
 	constructor(private dataService: DataService) { }
 
 	ngOnInit() {
 
 		this.stockData = this.dataService.getStockData();
-		this.returnedArray = this.stockData.slice(0, 10);
+		this.returnedArray = this.stockData.slice(0, 5);
 
 	}
 

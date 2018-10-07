@@ -33,10 +33,11 @@ mat-sidenav {
 .menu-item {
 
 	width: 100% !important;
+	border-bottom: 1px solid rgb(109, 102, 170);
 
 	&:hover {
 
-		background-color: rgb(136, 28, 127);
+		background-color: rgb(87, 28, 136);
 
 	}
 

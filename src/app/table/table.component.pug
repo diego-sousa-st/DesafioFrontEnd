@@ -24,7 +24,8 @@
 			[boundaryLinks]='true',
 			(pageChanged)='pageChanged($event)',
 			[maxSize]="10",
-			[previousText]="'&lsaquo;'", [nextText]="'&rsaquo;'", [firstText]="'&laquo;'", [lastText]="'&raquo;'"
+			[previousText]="'&lsaquo;'", [nextText]="'&rsaquo;'", [firstText]="'&laquo;'", [lastText]="'&raquo;'",
+			[itemsPerPage]="5"
 		)
-		span Exemplo: Visualizando {{ startItem }} - {{ endItem }} de {{ stockData.length }}
+		span Exemplo: Visualizando {{ startItem + 1 }} - {{ endItem }} de {{ stockData.length }}
 
